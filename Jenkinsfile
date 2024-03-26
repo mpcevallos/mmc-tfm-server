@@ -18,7 +18,7 @@ pipeline {
                             -Dsonar.projectKey=server \
                             -Dsonar.sources=. \
                             -Dsonar.host.url=http://localhost:9000 \
-                            -Dsonar.token=sqp_8871e861546564ca35025574380ccc281e056c0c
+                            -Dsonar.token=sqp_185bc4a1f756cccf3d2afc6ef6ef02171d77ce54
                         """
                     }
                     timeout(time: 2, unit: 'MINUTES') {
