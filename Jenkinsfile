@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', credentialsId: 'git-threepoints-github', url: 'https://github.com/mpcevallos/mmc-tfm-server'
+                git branch: 'master', credentialsId: 'git-threepoints-github', url: 'https://github.com/mpcevallos/mmc-tfm-server/'
             }
         }
 
@@ -18,7 +18,7 @@ pipeline {
                             -Dsonar.projectKey=server \
                             -Dsonar.sources=. \
                             -Dsonar.host.url=http://localhost:9000 \
-                            -Dsonar.token=sqp_185bc4a1f756cccf3d2afc6ef6ef02171d77ce54
+                            -Dsonar.login=sqp_185bc4a1f756cccf3d2afc6ef6ef02171d77ce54
                         """
                     }
                     timeout(time: 2, unit: 'MINUTES') {
