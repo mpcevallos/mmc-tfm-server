@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', credentialsId: 'git-threepoints-github', url: 'https://github.com/mpcevallos/mmc-tfm-server/'
+                git branch: 'master', credentialsId: 'git-threepoints-github', url: 'https://github.com/mpcevallos/mmc-tfm-server'
             }
         }
 
