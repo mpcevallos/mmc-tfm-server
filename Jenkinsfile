@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     def scannerHome = tool 'sonar-scanner'
-                    withSonarQubeEnv(credentialsId:'sonar-token', installationName: 'SonarQube') {
+                    withSonarQubeEnv(credentialsId:'sonar-token', installationName: 'Sonar Scanner') {
                         sh """
                             ${scannerHome}/bin/sonar-scanner \
                             -Dsonar.projectKey=server \
