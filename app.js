@@ -15,7 +15,7 @@ app.use("/api/usuario", usuarioRouter);
 app.use("/api/cita", citaRouter);
 app.use("/api/catalogo", catalogoRouter);
 
-app.listen(process.env.APP_PORT, () => {
+app.listen(process.env.APP_PORT || 3000, () => {
   console.log("Server up and running on PORT:", process.env.APP_PORT);
 });
 
