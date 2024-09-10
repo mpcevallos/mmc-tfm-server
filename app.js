@@ -6,8 +6,16 @@ const catalogoRouter = require("./api/catalogo/catalogo.router");
 const app = express();
 
 const usuarioRouter = require("./api/usuario/usuario.router");
-// Habilitar CORS para todas las rutas
-app.use(cors());
+
+// Configurar CORS
+app.use(
+  cors({
+    origin: "*", // Permitir todas las solicitudes
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Métodos permitidos
+    allowedHeaders: ["Content-Type", "Authorization"], // Encabezados permitidos
+  })
+);
+
 app.use(express.json());
 
 app.use("/api/usuario", usuarioRouter);
